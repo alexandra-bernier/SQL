@@ -1,0 +1,29 @@
+--Create a bookstore database
+
+CREATE TABLE Bookstore (id INTEGER PRIMARY KEY, name TEXT, type TEXT, price INTEGER, rating INTEGER, quantity INTEGER);
+
+INSERT into Bookstore VALUES (1, "ACOTAR", "hardcover", 12, 5, 1);
+INSERT into Bookstore VALUES (2, "ACOMAF", "hardcover", 13, 5, 4);
+INSERT into Bookstore VALUES (3, "ACOWAR", "hardcover", 11, 5, 2);
+INSERT into Bookstore VALUES (5, "ACOSAF", "hardcover", 15, 5, 2);
+INSERT into Bookstore VALUES (6, "TOG", "paperback", 11, 4, 3);
+INSERT into Bookstore VALUES (7, "HP", "paperback", 11, 4, 6);
+INSERT into Bookstore VALUES (8, "HP2", "paperback", 11, 4, 1);
+INSERT into Bookstore VALUES (9, "HP3", "paperback", 13, 4, 1);
+INSERT into Bookstore VALUES (11, "HP5", "paperback", 11, 4, 1);
+INSERT into Bookstore VALUES (12, "HP6", "paperback", 11, 4, 2);
+INSERT into Bookstore VALUES (13, "SOG", "hardcover", 20, 3, 3);
+INSERT into Bookstore VALUES (15, "Circe", "hardcover", 21, 3, 4);
+
+--display the database with all values
+
+SELECT * FROM Bookstore;
+
+--display the database ordered by price
+
+SELECT * FROM bookstore ORDER BY price asc;
+
+--display the inventory of books by quantity
+
+SELECT SUM(quantity) FROM bookstore;
+
